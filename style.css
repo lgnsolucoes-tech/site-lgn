@@ -289,6 +289,9 @@ p {
     box-shadow: var(--shadow-soft);
     transition: var(--transition);
     border: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .service-card:hover {
@@ -308,6 +311,92 @@ p {
     justify-content: center;
     font-size: 2.5rem;
     margin-bottom: 24px;
+}
+
+/* Plan Features */
+.plan-features {
+    list-style: none;
+    margin-top: 24px;
+    margin-bottom: 24px;
+    padding: 0;
+    text-align: left;
+}
+
+.plan-features li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 16px;
+    color: var(--text-muted);
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.plan-features li i {
+    color: var(--primary-green);
+    font-size: 1.2rem;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.popular-plan {
+    position: relative;
+    border-color: var(--primary-green);
+    box-shadow: var(--shadow-hover);
+    transform: scale(1.05);
+    z-index: 10;
+}
+
+.popular-badge {
+    position: absolute;
+    top: -16px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--primary-green);
+    color: white;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    box-shadow: 0 4px 10px rgba(16, 185, 129, 0.3);
+}
+
+.plan-price {
+    margin-top: 8px;
+    margin-bottom: 24px;
+    padding-top: 16px;
+    border-top: 1px dashed var(--border-color);
+}
+
+.plan-price p {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+    color: var(--text-dark);
+}
+
+.plan-price p span {
+    color: var(--text-muted);
+}
+
+.plan-price p strong {
+    font-size: 1.1rem;
+    color: var(--primary-blue-dark);
+}
+
+.plan-price .monthly-fee strong {
+    color: var(--primary-green-dark);
+}
+
+@media (max-width: 1024px) {
+    .popular-plan {
+        transform: none;
+        z-index: 1;
+    }
 }
 
 /* Cases */
